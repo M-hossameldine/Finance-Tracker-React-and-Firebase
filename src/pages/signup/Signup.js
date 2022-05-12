@@ -4,22 +4,22 @@ import React, { useState } from 'react';
 import styles from './Signup.module.css';
 
 export default function Signup() {
-  const [name, setName] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(name, email, password);
+    console.log(displayName, email, password);
   };
   return (
     <form onSubmit={handleSubmit} className={styles['signup-form']}>
       <label>
-        <span>Name:</span>
+        <span>Display Name:</span>
         <input
           type='text'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={displayName}
+          onChange={(e) => setDisplayName(e.target.value)}
         />
       </label>
       <label>
