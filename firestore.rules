@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /transactions/{document=**} {
+      // allow read, write: if
+      //     request.time < timestamp.date(2022, 6, 14);
+    
+      // only authenticated users can create docs
+      allow create: if request.auth != null
+
+      // logged in user uid must match the document creator to read & delete
+      allow read, delete: if request.auth.uid == resource.data.uid 
+    }
+  }
+}
