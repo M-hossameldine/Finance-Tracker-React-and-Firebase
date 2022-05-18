@@ -1,6 +1,6 @@
 # myMoney - React and Firebase Web v.8
 
-#### Demo site is here: [User Auth Flow](https://user-auth-flow.web.app/)
+#### Demo site is here: [myMoney Demo](https://mymoney-assistant.web.app/)
 
 ## Table of Contents
 
